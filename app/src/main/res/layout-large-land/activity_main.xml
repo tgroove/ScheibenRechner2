@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFFFF"
+    android:orientation="horizontal"
+    android:id="@+id/view_main_activity"
+    tools:context=".MainActivity" >
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+        <net.herch.thorsten.scheibenrechner2.DrawingView
+            android:id="@+id/drawing_scheibe"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+
+            android:layout_weight="1"
+            android:background="#FFFAFCB6" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="200dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="10dp"
+        android:layout_weight="2" >
+        <TextView
+            android:id="@+id/textView_summe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="#10FFFFFF"
+            android:textColor="#FF000000"
+            android:text="23"
+            android:textSize="70sp" />
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_alignParentBottom="true" >
+
+            <Button
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:textSize="65sp"
+                android:text="+"
+                android:onClick="doAdd" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:textSize="65sp"
+
+                android:text="C"
+                android:onClick="doClear" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Config"
+                android:id="@+id/button"
+                android:visibility="invisible"
+                android:onClick="goConfig" />
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>
